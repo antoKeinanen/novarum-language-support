@@ -1,0 +1,51 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Novarum",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#comment"
+    }
+  ],
+  "repository": {
+		"list": {
+			"patterns": [{
+				"name": "markup.list",
+				"match": "-"
+			}]
+		},
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign",
+					"match": "#.*"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.novarum",
+          "match": "\\b(if|shell|chdir|print|message|select|multiselect|end)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.novarum",
+      "begin": "\"|'",
+      "end": "\"|'",
+      "patterns": [
+        {
+          "name": "constant.character.escape.novarum",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.novconf"
+}

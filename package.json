@@ -1,0 +1,25 @@
+{
+  "name": "novarum",
+  "displayName": "Novarum",
+  "description": "Language support for Novarum's .novconf configuration files.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "novarum",
+      "aliases": ["Novarum", "novarum", "novconf"],
+      "extensions": [".novconf"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "novarum",
+      "scopeName": "source.novconf",
+      "path": "./syntaxes/novarum.tmLanguage.json"
+    }]
+  }
+}
