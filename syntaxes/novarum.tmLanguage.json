@@ -31,7 +31,7 @@
       "patterns": [
         {
           "name": "keyword.control.novarum",
-          "match": "\\b(if|shell|chdir|print|message|select|multiselect|end)\\b"
+          "match": "^\\s*\\b(if|shell|chdir|print|message|select|multiselect|end|searchselect)\\b"
         }
       ]
     },
